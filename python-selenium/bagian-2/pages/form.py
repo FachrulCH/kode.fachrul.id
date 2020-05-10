@@ -13,6 +13,7 @@ class Form():
     EDUCATION = (By.ID, 'radio-button-{}')
     GENDER = (By.ID, 'checkbox-{}')
     EXPERIENCE = (By.ID, 'select-menu')
+    DATE = (By.ID, 'datepicker')
 
 
     def __init__(self, browser: webdriver.Remote):
@@ -25,7 +26,7 @@ class Form():
         self.browser.find_element(*self.FIRST_NAME).send_keys(first_name)
         self.browser.find_element(*self.LAST_NAME).send_keys(last_name)
 
-    def submit_form(self):
+    def submit(self):
         self.browser.find_element(*self.SUBMIT).click()
         time.sleep(3)
 
@@ -47,6 +48,8 @@ class Form():
         self.browser.find_element(_by, _val).click()
 
     def choose_experience(self, user_experience: str):
-        print('user experience: ', user_experience)
         select = Select(self.browser.find_element(*self.EXPERIENCE))
         select.select_by_visible_text(user_experience)
+
+    def input_date(self, date: str):
+        self.browser.find_element(*self.DATE).send_keys(date)

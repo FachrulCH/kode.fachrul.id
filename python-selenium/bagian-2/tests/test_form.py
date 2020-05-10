@@ -12,9 +12,10 @@ class TestForm():
         form_page.choose_education('Grad School')
         form_page.choose_gender('Female')
         form_page.choose_experience('2-4')
-        time.sleep(3)
-        # form_page.submit_form()
+        form_page.input_date('05/09/2020')
+        form_page.submit()
 
-        # thanks_page = Thanks(browser)
-        # assert thanks_page.title == 'Thanks for submitting your form'
-        # assert thanks_page.message == 'The form was successfully submitted!'
+        thanks_page = Thanks(browser)
+        thanks_page.verify_alert_is_green()
+        assert thanks_page.title == 'Thanks for submitting your form'
+        assert thanks_page.message == 'The form was successfully submitted!'

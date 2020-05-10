@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from assertpy import assert_that
 
 class Thanks():
     TITLE = (By.TAG_NAME, 'h1')
@@ -15,3 +16,8 @@ class Thanks():
     @property
     def message(self):
         return str(self.browser.find_element(*self.MESSAGE).text).strip()
+
+    def verify_alert_is_green(self):
+        el_class = self.browser.find_element(*self.MESSAGE).get_attribute('class')
+        # assert 'success' in el_class
+        assert_that(el_class).contains('successs')
