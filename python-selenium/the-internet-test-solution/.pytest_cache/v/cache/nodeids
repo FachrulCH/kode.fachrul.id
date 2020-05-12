@@ -1,3 +1,4 @@
 [
-  "tests/test_drag_drop.py::test_drag_a_to_b"
+  "tests/test_checkboxes.py::test_default_state",
+  "tests/test_checkboxes.py::test_state_after_checked"
 ]

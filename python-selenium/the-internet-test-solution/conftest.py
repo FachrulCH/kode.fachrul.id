@@ -9,6 +9,5 @@ def browser():
     # _browser = webdriver.Chrome(options=chrome_options)
     _browser = webdriver.Chrome()
     _browser.implicitly_wait(10)
-    _browser.get('https://the-internet.herokuapp.com/')
     yield _browser
     _browser.quit()

@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
 def test_drag_a_to_b(browser: webdriver.Remote):
-    # browser.get('https://the-internet.herokuapp.com/drag_and_drop')
+    browser.get('https://the-internet.herokuapp.com/drag_and_drop')
     browser.find_element_by_link_text('Drag and Drop').click()
     box_a = browser.find_element_by_id('column-a')
     box_b = browser.find_element_by_id('column-b')
