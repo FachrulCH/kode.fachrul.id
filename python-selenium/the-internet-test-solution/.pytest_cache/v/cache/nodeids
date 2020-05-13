@@ -1,4 +1,4 @@
 [
-  "tests/test_checkboxes.py::test_default_state",
-  "tests/test_checkboxes.py::test_state_after_checked"
+  "tests/test_add_remove_element.py::test_adding",
+  "tests/test_add_remove_element.py::test_removing"
 ]

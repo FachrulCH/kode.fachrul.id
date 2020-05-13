@@ -1,4 +1,3 @@
-import time
 from selenium import webdriver
 
 def test_default_state(browser: webdriver.Remote):
