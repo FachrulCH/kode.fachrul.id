@@ -10,5 +10,3 @@ pytest = "*"
 selenium = "*"
 assertpy = "*"
 
-[requires]
-python_version = "3.7"
